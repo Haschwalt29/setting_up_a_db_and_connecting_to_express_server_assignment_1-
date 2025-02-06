@@ -5,10 +5,10 @@ const dotenv = require('dotenv');
 dotenv.config(); // Load environment variables
 
 const app = express();
-const port = 3010;
+const port = 8000;
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to database');
   })
